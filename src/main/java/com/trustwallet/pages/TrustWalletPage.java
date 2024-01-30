@@ -11,6 +11,7 @@ public class TrustWalletPage {
     private final Locator inputField;
     private final Locator submitButton;
     private final Locator greetingMessage;
+    private final Locator somethingElseBtn;
     private  final Locator hereLink;
     private  final Locator otherBtn;
     private  final Locator moreBtn;
@@ -30,6 +31,7 @@ public class TrustWalletPage {
         this.otherBtn = chatFrameLocator.locator("body > div:nth-child(2) > div:nth-child(1) > div:nth-child(2) > div:nth-child(2) > button:nth-child(2)");
         this.selectSubCategory = chatFrameLocator.locator("//div/p[contains(text(),'Please select sub-category:')]");
         this.subCategoryResponse = chatFrameLocator.locator("//button[normalize-space()='General/ How To's/ Guides']");
+        this.somethingElseBtn = chatFrameLocator.locator("//button[normalize-space()='Something else']");
 
     }
     public void navigateToUrl(String url) {
@@ -56,9 +58,10 @@ public class TrustWalletPage {
 //    public boolean isMessageVisible(String message) {
 //        return this.chatFrameLocator.textContent().contains(message);
 //    }
-    public void theUserAskToTalkWithAgentAndUseCorrectEmail() {
-    }
 
+    public void clickOnSomethingElseButton() {
+        somethingElseBtn.click();
+    }
 }
 
 
